@@ -30,9 +30,12 @@ spec:
 ```
 
 Details : 
-apiVersion: La version de l'API Kubernetes utilisée pour définir cette ressource.
 ##
-kind: Le type de ressource Kubernetes, qui est un "Deployment" dans ce cas.
+# apiVersion: 
+La version de l'API Kubernetes utilisée pour définir cette ressource.
+##
+# kind:
+Le type de ressource Kubernetes, qui est un "Deployment" dans ce cas.
 ##
 metadata: Les métadonnées associées à cette ressource, y compris le nom de déploiement.
 ##
