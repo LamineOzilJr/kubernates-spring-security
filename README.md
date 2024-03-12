@@ -29,17 +29,30 @@ spec:
             - containerPort: 8087
 ```
 
-Détails :
+Details : 
 apiVersion: La version de l'API Kubernetes utilisée pour définir cette ressource.
+##
 kind: Le type de ressource Kubernetes, qui est un "Deployment" dans ce cas.
+##
 metadata: Les métadonnées associées à cette ressource, y compris le nom de déploiement.
+##
 spec: Les spécifications du déploiement, y compris le nombre de répliques et les sélecteurs pour identifier les pods.
+##
 template: Le modèle pour créer de nouveaux pods.
+##
 metadata: Les métadonnées associées au modèle, y compris les libellés.
+##
 spec: Les spécifications des conteneurs dans le pod.
+##
 containers: La liste des conteneurs dans le pod.
+##
 name: Le nom du conteneur.
+##
 image: L'image Docker utilisée pour le conteneur.
+##
 imagePullPolicy: La politique de tirage de l'image, qui est "IfNotPresent" ici.
+##
 ports: Les ports exposés par le conteneur.
+##
 containerPort: Le port du conteneur qui sera exposé.
+##
