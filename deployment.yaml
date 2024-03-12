@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: evalsecurrity
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: evalsecurrity
+  template:
+    metadata:
+      labels:
+        app: evalsecurrity
+    spec:
+      containers:
+        - name: evalspringmysqlsec
+          image: lamineoziljr/evalspringse:v2
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8087
