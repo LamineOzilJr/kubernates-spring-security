@@ -126,3 +126,5 @@ Le port sur lequel le service redirige le trafic vers les pods.
 # nodePort: 
 Le port accessible sur chaque nœud de la grappe.
 ##
+
+![alt text](https://github.com/LamineOzilJr/kubernates-spring-security/blob/main/dashboards.png?raw=true)
