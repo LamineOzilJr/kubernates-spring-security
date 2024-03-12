@@ -4,7 +4,7 @@
 
 Ce fichier YAML décrit une ressource Kubernetes de type Deployment. Il déploie une application nommée "evalsecurrity", avec deux répliques, utilisant une image Docker "lamineoziljr/evalspringse:v2" pour le conteneur appelé "evalspringmysqlsec". 
 
-## Contenu détaillé du fichier YAML
+## Contenu du fichier de deploiement
 
 ```yaml
 apiVersion: apps/v1
