@@ -1,5 +1,9 @@
 # kubernates-spring-security
 
+# MINIKUBE DASHBOARD
+
+![alt text](https://github.com/LamineOzilJr/kubernates-spring-security/blob/main/dashboards.png?raw=true)
+
 # Description du fichier de deploiement
 
 Ce fichier YAML décrit une ressource Kubernetes de type Deployment. Il déploie une application nommée "evalsecurrity", avec deux répliques, utilisant une image Docker "lamineoziljr/evalspringse:v2" pour le conteneur appelé "evalspringmysqlsec". 
