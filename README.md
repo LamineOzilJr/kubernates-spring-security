@@ -127,4 +127,6 @@ Le port sur lequel le service redirige le trafic vers les pods.
 Le port accessible sur chaque nœud de la grappe.
 ##
 
+# MINIKUBE DASHBOARD
+
 ![alt text](https://github.com/LamineOzilJr/kubernates-spring-security/blob/main/dashboards.png?raw=true)
