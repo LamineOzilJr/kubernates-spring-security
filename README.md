@@ -1,6 +1,6 @@
 # kubernates-spring-security
 
-# Description du fichier YAML
+# Description du fichier de deploiement
 
 Ce fichier YAML décrit une ressource Kubernetes de type Deployment. Il déploie une application nommée "evalsecurrity", avec deux répliques, utilisant une image Docker "lamineoziljr/evalspringse:v2" pour le conteneur appelé "evalspringmysqlsec". 
 
@@ -69,4 +69,60 @@ Les ports exposés par le conteneur.
 ##
 # containerPort: 
 Le port du conteneur qui sera exposé.
+##
+
+
+# Description des services
+
+Ce fichier YAML décrit un service Kubernetes de type NodePort. Il crée un service nommé "evalsecurrity-service" qui expose le port 8087 de l'application "evalsecurrity" sur le port 8088 du conteneur, accessible via un NodePort (30005).
+
+## Contenu du fichier service
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: evalsecurrity-service
+spec:
+  type: NodePort
+  selector:
+    app: evalsecurrity
+  ports:
+    - name: http
+      port: 8087
+      targetPort: 8088
+      nodePort: 30005
+
+```
+Details :
+##
+# apiVersion: 
+La version de l'API Kubernetes utilisée pour définir cette ressource.
+##
+# kind: 
+Le type de ressource Kubernetes, qui est un "Service" dans ce cas.
+##
+# metadata: 
+Les métadonnées associées à cette ressource, y compris le nom du service.
+##
+# spec: 
+Les spécifications du service, y compris le type de service (NodePort) et les ports exposés.
+##
+# selector: 
+Les labels utilisés pour sélectionner les pods auxquels ce service s'applique.
+##
+# ports: 
+Les ports exposés par le service.
+##
+# name: 
+Le nom du port exposé.
+##
+# port:
+Le port du service.
+##
+# targetPort: 
+Le port sur lequel le service redirige le trafic vers les pods.
+##
+# nodePort: 
+Le port accessible sur chaque nœud de la grappe.
 ##
